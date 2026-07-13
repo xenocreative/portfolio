@@ -1,23 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Xeno Otaku Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cayden Thompson | Content Creator</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#111,#1f1f1f);
+padding:20px;
+}
+
+h1{
+font-size:4rem;
+margin-bottom:10px;
+}
+
+h2{
+color:#999;
+font-weight:400;
+margin-bottom:30px;
+}
+
+.button{
+display:inline-block;
+padding:15px 35px;
+background:#ff5a36;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+transition:.3s;
+}
+
+.button:hover{
+transform:scale(1.05);
+}
+
+section{
+max-width:1000px;
+margin:auto;
+padding:80px 25px;
+}
+
+.section-title{
+font-size:2rem;
+margin-bottom:30px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1b1b1b;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+footer{
+text-align:center;
+padding:40px;
+color:#777;
+}
+
+</style>
+
 </head>
 
 <body>
 
+<header>
+
 <h1>Cayden Thompson</h1>
-<h2>Content Creator | Social Media Manager</h2>
 
-<p>
-I create short-form videos, product promos, and social media content designed to grab attention.
+<h2>Content Creator • Video Editor • Social Media</h2>
+
+<a href="#projects" class="button">View My Work</a>
+
+</header>
+
+<section id="projects">
+
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Carolina Bait & Tackle</h3>
+<p>Created promotional product videos, comedy content, and social media marketing campaigns.</p>
+</div>
+
+<div class="card">
+<h3>Xeno Otaku</h3>
+<p>Personal YouTube channel featuring edited videos with over six years of content creation experience.</p>
+</div>
+
+<div class="card">
+<h3>Short Form Content</h3>
+<p>Vertical videos optimized for TikTok, Instagram Reels, and YouTube Shorts.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">About Me</h2>
+
+<p style="line-height:1.8;font-size:18px;">
+I'm a content creator and video editor with over six years of experience creating engaging short-form and long-form content. I specialize in editing, scripting, product marketing, and creating videos that capture attention across multiple platforms.
 </p>
 
-<h2>My Work</h2>
+</section>
 
-<p>
-Product videos, promotional content, comedy skits, and YouTube projects.
-</p>
+<section>
+
+<h2 class="section-title">Skills</h2>
+
+<div class="cards">
+
+<div class="card">🎬 Video Editing</div>
+<div class="card">📱 Social Media Marketing</div>
+<div class="card">✍️ Script Writing</div>
+<div class="card">🎨 Graphic Design</div>
+<div class="card">📷 Photography</div>
+<div class="card">🚀 Content Strategy</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Cayden Thompson
+
+</footer>
 
 </body>
 </html>
