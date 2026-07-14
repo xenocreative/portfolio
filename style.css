@@ -1,4 +1,17 @@
-/* ---------- RESET ---------- */
+/* =========================================
+   XENO Portfolio
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --bg:#0a0a0a;
+    --card:#141414;
+    --accent:#ff6b35;
+    --text:#ffffff;
+    --muted:#9ca3af;
+    --border:rgba(255,255,255,.08);
+}
 
 *{
     margin:0;
@@ -11,252 +24,244 @@ html{
 }
 
 body{
-    background:#090909;
-    color:#fff;
+    background:var(--bg);
+    color:var(--text);
     font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
 }
 
-/* ---------- NAV ---------- */
+/* ---------- Navigation ---------- */
 
 nav{
-
     position:fixed;
     top:0;
     width:100%;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:25px 10%;
-
-    background:rgba(9,9,9,.85);
-    backdrop-filter:blur(10px);
-
+    padding:22px 8%;
+    background:rgba(10,10,10,.75);
+    backdrop-filter:blur(18px);
     z-index:1000;
-
 }
 
 .logo{
-
-    font-size:28px;
+    font-size:30px;
     font-weight:800;
-    letter-spacing:2px;
-
+    letter-spacing:3px;
 }
 
 nav ul{
-
     display:flex;
     list-style:none;
-    gap:40px;
-
+    gap:35px;
 }
 
 nav a{
-
     color:white;
     text-decoration:none;
     transition:.3s;
-
 }
 
 nav a:hover{
-
-    color:#FF6B35;
-
+    color:var(--accent);
 }
 
-/* ---------- HERO ---------- */
+/* ---------- Hero ---------- */
 
-header{
-
+#hero{
     min-height:100vh;
-
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
-
     text-align:center;
-
-    padding:40px;
-
+    padding:0 24px;
+    position:relative;
 }
 
-.hero-logo{
+/* Orange glow */
 
-    width:220px;
-    margin-bottom:35px;
-
+#hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:var(--accent);
+    filter:blur(180px);
+    opacity:.18;
+    border-radius:50%;
 }
 
-header h1{
-
-    font-size:70px;
-    line-height:1.1;
+.hero-content{
+    position:relative;
     max-width:900px;
-
+    z-index:2;
 }
 
-header p{
-
-    margin-top:25px;
-    color:#a1a1aa;
-    font-size:22px;
-
-}
-
-.button{
-
-    margin-top:45px;
-
-    display:inline-block;
-
-    padding:16px 42px;
-
-    border-radius:50px;
-
-    background:#FF6B35;
-
-    color:white;
-
-    text-decoration:none;
-
+.intro{
+    color:var(--accent);
     font-weight:600;
-
-    transition:.3s;
-
+    margin-bottom:18px;
 }
 
-.button:hover{
+h1{
+    font-size:72px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
 
+#hero h2{
+    font-size:28px;
+    font-weight:500;
+    color:#d4d4d4;
+    margin-bottom:20px;
+}
+
+.description{
+    color:var(--muted);
+    font-size:18px;
+    margin-bottom:45px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 38px;
+    background:var(--accent);
+    color:white;
+    text-decoration:none;
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.btn:hover{
     transform:translateY(-4px);
-
+    box-shadow:0 12px 35px rgba(255,107,53,.35);
 }
 
-/* ---------- SECTIONS ---------- */
+/* ---------- Sections ---------- */
 
 section{
-
     width:min(1100px,90%);
     margin:auto;
-    padding:120px 0;
-
+    padding:100px 0;
 }
 
-section h2{
-
+.section-title{
     font-size:42px;
-    margin-bottom:40px;
-
+    margin-bottom:45px;
 }
 
-/* ---------- PROJECTS ---------- */
+/* ---------- Project Cards ---------- */
 
-.project{
-
-    background:#161616;
-
-    border-radius:20px;
-
-    padding:40px;
-
-    margin-bottom:30px;
-
-    transition:.35s;
-
-}
-
-.project:hover{
-
-    transform:translateY(-10px);
-
-    border:1px solid #FF6B35;
-
-}
-
-/* ---------- SKILLS ---------- */
-
-.skills-grid{
-
+.project-card{
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-    gap:25px;
-
+    grid-template-columns:300px 1fr;
+    gap:35px;
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:28px;
+    margin-bottom:30px;
+    transition:.35s ease;
 }
 
-.skills-grid div{
+.project-card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(255,107,53,.45);
+}
 
-    background:#161616;
-
-    padding:30px;
-
+.project-image{
+    background:linear-gradient(135deg,#2b2b2b,#1a1a1a);
     border-radius:18px;
+    min-height:180px;
+}
 
+.project-text h3{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.project-text p{
+    color:var(--muted);
+    line-height:1.7;
+}
+
+/* ---------- About ---------- */
+
+#about p{
+    color:var(--muted);
+    line-height:1.9;
+    font-size:18px;
+}
+
+/* ---------- Skills ---------- */
+
+.skill-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:28px;
     text-align:center;
-
-    font-size:20px;
-
-}
-
-/* ---------- CONTACT ---------- */
-
-.socials{
-
-    display:flex;
-
-    gap:25px;
-
-    flex-wrap:wrap;
-
-}
-
-.socials a{
-
-    color:white;
-
-    text-decoration:none;
-
-    background:#161616;
-
-    padding:18px 30px;
-
-    border-radius:15px;
-
     transition:.3s;
-
 }
 
-.socials a:hover{
-
-    background:#FF6B35;
-
+.skill:hover{
+    border-color:rgba(255,107,53,.45);
+    transform:translateY(-6px);
 }
 
-/* ---------- MOBILE ---------- */
+/* ---------- Contact ---------- */
 
-@media(max-width:768px){
-
-header h1{
-
-font-size:42px;
-
+.links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
 }
 
-nav{
-
-flex-direction:column;
-gap:20px;
-
+.links a{
+    text-decoration:none;
+    color:white;
+    background:#1b1b1b;
+    padding:15px 28px;
+    border-radius:14px;
+    transition:.3s;
 }
 
-nav ul{
-
-gap:20px;
-
+.links a:hover{
+    background:var(--accent);
 }
 
+/* ---------- Mobile ---------- */
+
+@media(max-width:900px){
+
+    h1{
+        font-size:52px;
+    }
+
+    #hero h2{
+        font-size:22px;
+    }
+
+    .project-card{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    nav ul{
+        gap:18px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 }
